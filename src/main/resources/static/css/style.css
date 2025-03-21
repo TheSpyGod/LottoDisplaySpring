@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100vw;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header button {
+  border-radius: 50px;
+  border: none;
+  width: fit-content;
+  height: 60px;
+  background-color: bisque;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.TextBox {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 20px;
+  color: whitesmoke;
+  width: 50%;
+  height: 50%;
+  font-size: larger;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px;
+}
+
+span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 3px;
+  font-size: 14px;
+}
