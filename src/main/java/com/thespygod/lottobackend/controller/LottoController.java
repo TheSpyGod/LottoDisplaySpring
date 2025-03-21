@@ -30,7 +30,7 @@ public class LottoController {
     }
 
     private String runPythonScript(String message) throws IOException, InterruptedException  {
-        String pythonScriptPath = String.format("src/main/resources/python/%s.py", message); // Update this to your actual Python script path
+        String pythonScriptPath = String.format("/app/python/%s.py", message); // Update this to your actual Python script path
 
         if (!Files.exists(Paths.get(pythonScriptPath))) {
             throw new IOException("Python script not found: " + pythonScriptPath);
