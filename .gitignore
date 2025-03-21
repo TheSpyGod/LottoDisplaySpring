@@ -1,6 +1,6 @@
 HELP.md
 
-target/
+target/*
 !target/*SNAPSHOT.jar
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
