@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y python3 python3-pip
 COPY requirements.txt /app/requirements.txt
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 
-COPY --from=build /target/lottowebsocket-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /target/*SNAPSHOT.jar demo.jar
 
 COPY src/main/resources/python /app/python
 
