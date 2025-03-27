@@ -16,7 +16,7 @@ import java.nio.file.Paths;
 public class LottoController {
 
     @MessageMapping("/requestNum")
-    @SendTo("/topic/public")
+    @SendTo("/broker/public")
     public Message sendMessage(@Payload Message message) {
         System.out.println("Received message: " + message.getContent());
         String scriptOutput = "";
@@ -30,7 +30,7 @@ public class LottoController {
     }
 
     private String runPythonScript(String message) throws IOException, InterruptedException  {
-        String pythonScriptPath = String.format("/app/python/%s.py", message); // Update this to your actual Python script path
+        String pythonScriptPath = String.format("/app/python/%s.py", message);
 
         if (!Files.exists(Paths.get(pythonScriptPath))) {
             throw new IOException("Python script not found: " + pythonScriptPath);
