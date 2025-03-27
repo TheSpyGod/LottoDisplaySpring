@@ -9,5 +9,9 @@ import lombok.*;
 @Builder
 public class Message {
     private String content;
+
+    public String getContent() {
+        return this.content;
+    }
 }
 
